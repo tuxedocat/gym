@@ -55,15 +55,14 @@ putDebugLn ans = putStrLn (show ans)
 -- | problem 4A, body
 checkWatermelon :: Int -> String
 checkWatermelon w
+    | w == 2                  = "NO"
     | (even w)&&even(w - 2)   = "YES"
---    | (even w)&&even(div w 2) = "YES"
     | otherwise               = "NO"
-
-
 
 -- | main with IO
 main = do
-    w <- scan :: IO Int
+    wl <- getLine
+    let w = read ((words wl) !! 0) :: Int
     putAnsLn $ checkWatermelon w
 
 
