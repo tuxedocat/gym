@@ -9,6 +9,6 @@ checkWatermelon w
 main = do
     wl <- getLine
     let w = read ((words wl) !! 0) :: Int
-    putAnsLn $ checkWatermelon w
+    putStrLn $ checkWatermelon w
 
 
