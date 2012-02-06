@@ -7,7 +7,7 @@ fillSquare n m a = widthnum * heightnum
 main = do
     sn <- getLine
     let sl = words sn
-    n <-  read (sl !! 0) :: Int
+    let n = read (sl !! 0) :: Int
     let m = read (sl !! 1) :: Int
     let a = read (sl !! 2) :: Int
     putStrLn $ show (fillSquare n m a)
