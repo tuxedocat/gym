@@ -2,7 +2,7 @@
 //  main.cpp
 //  ponds
 //
-//  Created by Yu Sawai on 1/12/16.
+//  Created by tuxedocat on 1/12/16.
 //  Copyright © 2016 tuxedocat. All rights reserved.
 //
 

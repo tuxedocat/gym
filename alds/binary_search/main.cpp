@@ -2,7 +2,7 @@
 //  main.cpp
 //  binary_search
 //
-//  Created by Yu Sawai on 1/14/16.
+//  Created by tuxedocat on 1/14/16.
 //  Copyright © 2016 tuxedocat. All rights reserved.
 //
 
