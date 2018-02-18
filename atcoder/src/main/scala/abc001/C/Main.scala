@@ -1,5 +1,8 @@
-package abc001_3
+package abc001.C
 
+/**
+  * Copyright 2018 tuxedocat
+  */
 object Main extends App {
   val sc = new java.util.Scanner(System.in)
   val deg, meterPerMin = sc.nextInt()

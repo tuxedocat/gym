@@ -1,5 +1,8 @@
-package abc001_2
+package abc001.B
 
+/**
+  * Copyright 2018 tuxedocat
+  */
 object Main extends App {
   val sc = new java.util.Scanner(System.in)
   val m = sc.nextDouble() / 1000
