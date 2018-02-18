@@ -24,3 +24,11 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+
+.ensime*
+.idea/
+project/
+target/
+
+.DS_Store
+*~
