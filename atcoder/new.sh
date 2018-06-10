@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/bin/sh
+
 srcdir=./src/main/scala/
 testdir=./src/test/scala/
 
 # BSD's sed by default because I'm on a mac
-inplace_sed="sed -i ''"
+# inplace_sed="sed -i ''"
 # --- alternative for gnu-sed
 #     inplace_sed="sed -i''"
 
@@ -18,13 +19,17 @@ fi
 # Convert dots to slash
 pkgpath="${probname/.//}"
 clsname=$(echo ${probname} | sed -e 's/\.//g' | awk '{print toupper($0)}')
+echo $clsname
 mainpath=${srcdir}${pkgpath}/Main.scala
 testpath=${testdir}${pkgpath}/${clsname}Spec.scala
 
-mkdir -p ${srcdir}${pkgpath} && cp _templates/Main.scala ${mainpath}
-mkdir -p ${testdir}${pkgpath} && cp _templates/Spec.scala ${testpath}
+echo $mainpath
+echo $testpath
 
-${inplace_sed} -e "s/{{pkgname}}/${probname}/g" ${mainpath}
-${inplace_sed} -e "s/{{pkgname}}/${probname}/g" ${testpath}
-${inplace_sed} -e "s/{{clsname}}/${clsname}Spec/g" ${testpath}
+mkdir -p "${srcdir}${pkgpath}" && cp _templates/Main.scala "${mainpath}"
+mkdir -p "${testdir}${pkgpath}" && cp _templates/Spec.scala "${testpath}"
+
+sed -i.bak -e "s/{{pkgname}}/${probname}/g" ${mainpath} && rm "${mainpath}.bak"
+sed -i.bak -e "s/{{pkgname}}/${probname}/g" ${testpath} && rm "${testpath}.bak"
+sed -i.bak -e "s/{{clsname}}/${clsname}Spec/g" ${testpath} && rm "${testpath}.bak"
 
