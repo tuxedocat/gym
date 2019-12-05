@@ -1,5 +1,8 @@
 *.*~
 *.pyc
+
+exercism/
+
 DerivedData
 # Xcode
 #
