@@ -9,5 +9,3 @@ func main() {
     let addr1 = "255.100.50.0"
     print("\(defangIPaddr(addr1))")
 }
-
-main()
